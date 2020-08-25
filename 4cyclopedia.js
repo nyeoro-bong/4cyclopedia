@@ -20,14 +20,11 @@ assessmentButton.onclick = () => {
      * TODO ツイートエリアの作成
      */
     const userName = Date();
-    if(!userName){
-        return;//直ちに処理を完了するためのガード句
-    }
-
+   
     //HTMLにタグを足していく、ヘッダとパラグラフ
     removeAllchildren(resultDivided);   //消す
     const header = document.createElement(`h6`);    //定数header を宣言し、<h6>タグをつくって代入している
-    header.innerHTML = `"Today's one"`;      //定数headerの.innerHTMLプロパティに文字列`診断結果`を書き込み
+    header.innerHTML = `"Today's one"`;      //定数headerの.innerHTMLプロパティに文字列"Today's one"を書き込み
     resultDivided.appendChild(header);  //resultDividedに.appendChild()で子要素paragraphを足している
 
     const paragraph = document.createElement(`p`);  //定数paragraph を宣言し、<p>タグをつくって代入している
@@ -38,7 +35,7 @@ assessmentButton.onclick = () => {
     removeAllchildren(tweetDivided);   //tweetDidedの子要素を全て消す
     const anchor = document.createElement(`a`); //定数anchor を宣言し、<a>タグをつくって代入している
     const hrefValue = `https://twitter.com/intent/tweet?button_hashtag=`
-        + encodeURIComponent(`今日の四字熟語`)
+        + encodeURIComponent("Todays四字熟語")
         + `&ref_src=twsrc%5Etfw`;
 
     /**
@@ -69,16 +66,16 @@ userNameInput.onkeydown = (event) =>{
 
 
 const answers = [
-    `userName 風林火山　風:wind 林：forest 火：fire 山:montain "Move fast as wind, keep silence as forest, attack hard as fire, and hold still as montain", Fighting theory of Takeda Shingen, Samrai load of Sengoku-era`,
-    `userName 赤坂見附　赤:red 坂：hill 見:watch 附:put "Red hill watch position", station name of Ginza/Marunouchi line`,
-    `userName 一撃必殺　一:one 撃：brow 必：must 殺:kill "Special single set of knock-out technique"`,
-    `userName 電光石火　電:electic 光：light 石：stone 火:fire "Flashing fast movement like a lightning"`,
-    `userName 凱風凱歌　凱：trienph 風:wind 凱：trienph 歌:song "fine wind,fine seenary with trienph feeling", or the name of famous ukiyo-e “Fine Wind, Clear Morning,” `,
-    `userName 一日千秋　一:one 日：day 千：thousand 秋:fall "One day feels like tohsands of seasons", Feeling awaiting reply or result of something special`,
-    `userName 天下泰平　天:heaven 下：below 泰：peace 平:flat "Statement of peaceful heaven and earth", pax Tokugawa of Edo-era`,
-    `userName 日進月歩　日:day 進：progress 月：month 歩:walk "Slow and steady renewal of something"`,
-    `userName 門前仲町　門:gate 前：front 仲：friendly 町:town , station name of Tozai/Oedo line`,
-    `userName 古今東西　古:past 今：now 東：east 西:west "Something in common, timeless and worldwide"`,
+    `userName 風林火山　風:wind  林：forest  火：fire  山:montain,  "Move fast as wind, keep silence as forest, attack hard as fire, and hold still as montain", Fighting theory of Takeda Shingen, Famous samrai load of Sengoku-era`,
+    `userName 赤坂見附　赤:red  坂：hill  見:watch  附:attach,  "Red hill scouting base", Station name of Ginza/Marunouchi line`,
+    `userName 一撃必殺　一:one  撃:brow  必:must  殺:kill,  "Special single set of knock-out technique"`,
+    `userName 電光石火　電:electic  光：light  石：stone  火:fire,  "Flashing fast movement like a lightning"`,
+    `userName 凱風凱歌　凱:triumph  風:wind  凱:triumph  歌:song,  "Fine wind,fine seenary with triumphant feeling", or the name of famous ukiyo-e “Fine Wind, Clear Morning,” `,
+    `userName 一日千秋　一:one  日:day  千:thousand  秋:fall,  "One day feels like tohsands of seasons", Feeling awaiting reply or result of something special`,
+    `userName 天下泰平　天:heaven  下：below  泰：peace  平:flat,  "State of peaceful heaven and earth", Descriotion for Pax-Tokugawa of Edo-era`,
+    `userName 日進月歩　日:day  進:progress  月：month  歩:walk,  "Slow and steady renewal of something"`,
+    `userName 門前仲町　門:gate  前:front  仲:friendly  町:town,  Station name of Tozai/Oedo line`,
+    `userName 古今東西　古:past  今:now  東:east  西:west,  "Something in common, timeless and worldwide"`,
 ];
 
 /**
@@ -98,8 +95,8 @@ function assessment(userName) {
     }
 
     /**
-     * 文字列コードの合計が大きいので、合計を
-     * 回答数の長さで割って余りを出す
+     * 文字列コードの合計値を
+     * 回答の長さで割って余りを出す
      */
 
     const index = sumOfCharCode % answers.length;
