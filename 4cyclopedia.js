@@ -6,11 +6,11 @@ const tweetDivided = document.getElementById(`tweet-area`);
 
 /**
 * 指定した要素の子供を全削除する関数
-* @param {HTMLElement} element HTML HTMLの要素
+* @param {HTMLElement} element HTMLの要素
 */
 function removeAllchildren(element){
     while(element.firstChild){
-        element.removeChild(element.firstChild);
+        element.removeChild(element.firstChild);    //エレメントに子要素がある限り削除
     }
 }
 
@@ -23,30 +23,30 @@ assessmentButton.onclick = () => {
    
     //HTMLにタグを足していく、ヘッダとパラグラフ
     removeAllchildren(resultDivided);   //消す
-    const header = document.createElement(`h6`);    //定数header を宣言し、<h6>タグをつくって代入している
-    header.innerHTML = `"Today's one"`;      //定数headerの.innerHTMLプロパティに文字列"Today's one"を書き込み
+    const header = document.createElement(`h6`);    //変数header を宣言し、<h6>タグをつくって代入している
+    header.innerHTML = `"Today's one"`;      //変数headerの.innerHTMLプロパティに文字列"Today's one"を書き込み
     resultDivided.appendChild(header);  //resultDividedに.appendChild()で子要素paragraphを足している
 
-    const paragraph = document.createElement(`p`);  //定数paragraph を宣言し、<p>タグをつくって代入している
-    const result = assessment(userName);    //定数resultを作ってassessment()関数の引数userNameの戻り値を代入している
-    paragraph.innerText = result;   //定数pargraphのinnerTextプロパティに定数resultの値を代入している
+    const paragraph = document.createElement(`p`);  //変数paragraph を宣言し、<p>タグをつくって代入している
+    const result = assessment(userName);    //変数resultを作ってassessment()関数の引数userNameの戻り値を代入している
+    paragraph.innerText = result;   //変数pargraphのinnerTextプロパティに変数resultの値を代入している
     resultDivided.appendChild(paragraph);   //resultDividedに.appendChild()で子要素paragraphを足している
 
     removeAllchildren(tweetDivided);   //tweetDidedの子要素を全て消す
-    const anchor = document.createElement(`a`); //定数anchor を宣言し、<a>タグをつくって代入している
+    const anchor = document.createElement(`a`); //変数anchor を宣言し、<a>タグをつくって代入している
     const hrefValue = `https://twitter.com/intent/tweet?button_hashtag=`
         + encodeURIComponent("Todays四字熟語")
         + `&ref_src=twsrc%5Etfw`;
 
     /**
-     * 定数hrefValue を宣言し、twitterのhrefアドレスを代入している
+     * 変数hrefValue を宣言し、twitterのhrefアドレスを代入している
      */
 
     anchor.setAttribute(`href`,hrefValue);  //.setAttribute()でanchorに`href`属性を追加し,hrefValueを代入している
     anchor.className = `twitter-hashtag-button`;    //.classNameプロパティに
     anchor.setAttribute(`data-text`,result);  //.setAttribute()でanchorに`data-text`属性を追加し,answersの文章を代入している
     anchor.innerText = `Tweet #Today's 四字熟語`; //.innerTextプロパティを`Tweet #Today's 四字熟語`に書き換えている
-    tweetDivided.appendChild(anchor);   //tweetDivided定数に.appendChild()で子要素anchorを追加している
+    tweetDivided.appendChild(anchor);   //tweetDivided変数に.appendChild()で子要素anchorを追加している
     /*twttr.widgets.load();
     */
 
