@@ -72,7 +72,7 @@ const answers = [
     `userName 電光石火　電:electic  光：light  石：stone  火:fire,  "Flashing fast movement like a lightning"`,
     `userName 凱風凱歌　凱:triumph  風:wind  凱:triumph  歌:song,  "Fine wind,fine seenary with triumphant feeling", or the name of famous ukiyo-e “Fine Wind, Clear Morning,” `,
     `userName 一日千秋　一:one  日:day  千:thousand  秋:fall,  "One day feels like tohsands of seasons", Feeling awaiting reply or result of something special`,
-    `userName 天下泰平　天:heaven  下：below  泰：peace  平:flat,  "State of peaceful heaven and earth", Descriotion for Pax-Tokugawa of Edo-era`,
+    `userName 天下泰平　天:heaven  下：below  泰：peace  平:flat,  "State of peaceful heaven and earth", Description for Pax-Tokugawa of Edo-era`,
     `userName 日進月歩　日:day  進:progress  月：month  歩:walk,  "Slow and steady renewal of something"`,
     `userName 門前仲町　門:gate  前:front  仲:friendly  町:town,  Station name of Tozai/Oedo line`,
     `userName 古今東西　古:past  今:now  東:east  西:west,  "Something in common, timeless and worldwide"`,
